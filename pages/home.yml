@@ -1,0 +1,35 @@
+---
+id: 0
+content: |-
+  Good luck on your adventure!
+links:
+  - page:
+      id: 8
+      text: Start your adventure!
+      cond:
+        - flag: A
+          cmp: Less
+          num: 2
+  - page:
+      id: 1
+      text: The End
+  - action:
+      text: A + 1
+      actions:
+      - flag: A
+        effect: Add
+        modifier: 1
+  - choice:
+      caption: "Choose one:"
+      choices:
+        - text: A + 1
+          actions:
+            - flag: A
+              effect: Add
+              modifier: 1
+        - text: A + 2
+          actions:
+            - flag: A
+              effect: Add
+              modifier: 2
+
